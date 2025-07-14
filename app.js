@@ -7,8 +7,14 @@ console.log(btn, color)
 
 btn.addEventListener('click', function(){
     console.log('clicou no botão')
-    const randomNumber = 2
-
-    document.body.style.backgroundColor = colors[randomNumber]
-    color.textContent = colors[randomNumber]
+    const randomNumber = getRandomNumbers()
+                    //background-color
+    const mainColor = document.querySelector('main-color')
+    mainColor.computedStyleMap.backgroundColor = [randomNumber]
+    // document.body.style.backgroundColor = colors[randomNumber]
+    // color.textContent = colors[randomNumber] 
 })
+
+function getRandomNumbers() {
+    return Math.floor( Math.random() * colors.length)
+}
