@@ -1,4 +1,4 @@
-const colors = ['green', 'red', 'rgba(133,122,200)', '#f15025'];
+const colors = ['green', 'red', 'rgba(133,122,200)', '#f15025']
 
 const btn = document.getElementById('btn')
 const color = document.querySelector('.span-color')
@@ -9,10 +9,9 @@ btn.addEventListener('click', function(){
     console.log('clicou no botão')
     const randomNumber = getRandomNumbers()
                     //background-color
-    const mainColor = document.querySelector('main-color')
-    mainColor.computedStyleMap.backgroundColor = [randomNumber]
-    // document.body.style.backgroundColor = colors[randomNumber]
-    // color.textContent = colors[randomNumber] 
+    const mainColor = document.querySelector('#main-color')
+    mainColor.style.backgroundColor = colors[randomNumber]
+    color.textContent = colors[getRandomNumbers()]
 })
 
 function getRandomNumbers() {
